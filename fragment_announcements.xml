@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/swipeRefresh"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F9FAFB">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="16dp">
+
+        <!-- Header -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:baselineAligned="false">
+
+            <TextView
+                android:id="@+id/tvHeader"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Latest Announcements"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                android:textColor="#111827" />
+
+            <ImageView
+                android:id="@+id/ivNotifications"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_notifications"
+                android:contentDescription="Notifications"
+                android:padding="8dp" />
+        </LinearLayout>
+
+        <!-- Buttons Row -->
+        <LinearLayout
+            android:id="@+id/buttonRow"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginTop="8dp"
+            android:weightSum="3"
+            android:divider="?android:attr/dividerHorizontal"
+            android:showDividers="middle"
+            android:dividerPadding="6dp">
+
+            <Button
+                android:id="@+id/btnFilter"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Filter"
+                android:textColor="#1D4ED8"
+                android:drawableLeft="@drawable/ic_filter"
+                android:background="@drawable/rounded_outline_button"
+                android:paddingHorizontal="12dp" />
+
+            <Button
+                android:id="@+id/btnRefresh"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Refresh"
+                android:textColor="#1D4ED8"
+                android:drawableLeft="@drawable/ic_refresh"
+                android:background="@drawable/rounded_outline_button"
+                android:paddingHorizontal="12dp" />
+        </LinearLayout>
+
+        <!-- RecyclerView -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerAnnouncements"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:layout_marginTop="12dp"
+            android:clipToPadding="false" />
+
+        <!-- Empty State -->
+        <TextView
+            android:id="@+id/tvNoAnnouncements"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="No announcements found."
+            android:textAlignment="center"
+            android:textColor="@android:color/darker_gray"
+            android:visibility="gone"
+            android:padding="16dp" />
+    </LinearLayout>
+</androidx.swiperefreshlayout.widget.SwipeRefreshLayout>

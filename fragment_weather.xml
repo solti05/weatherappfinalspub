@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/weatherFragmentRoot"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F7F8FC"
+    android:fillViewport="true"
+    tools:context=".WeatherFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Satellite Card -->
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="260dp"
+            android:background="@drawable/bg_card"
+            android:elevation="4dp"
+            android:padding="8dp">
+
+            <!-- Map WebView -->
+            <WebView
+                android:id="@+id/webViewMap"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+            <!-- LIVE Label Overlay -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:padding="12dp">
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:tint="#E53935"
+                    android:src="@drawable/ic_location_pin" />
+
+                <TextView
+                    android:id="@+id/tvLive"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:background="@drawable/bg_badge_live"
+                    android:text="LIVE"
+                    android:textColor="@android:color/white"
+                    android:textStyle="bold"
+                    android:paddingHorizontal="8dp"
+                    android:paddingVertical="4dp"
+                    android:textSize="12sp" />
+            </LinearLayout>
+
+            <!-- FABs on top-right -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_gravity="end|center_vertical"
+                android:layout_marginEnd="12dp"
+                android:gravity="center">
+
+                <com.google.android.material.floatingactionbutton.FloatingActionButton
+                    android:id="@+id/btnLayers"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    app:fabSize="mini"
+                    app:srcCompat="@drawable/ic_layers"
+                    app:tint="@android:color/white"
+                    android:contentDescription="Change Layers" />
+
+                <com.google.android.material.floatingactionbutton.FloatingActionButton
+                    android:id="@+id/btnRefresh"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:fabSize="mini"
+                    app:srcCompat="@drawable/ic_refresh"
+                    app:tint="@android:color/white"
+                    android:contentDescription="Refresh Weather" />
+            </LinearLayout>
+        </FrameLayout>
+
+        <!-- Weather Overview Card -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:orientation="vertical"
+            android:padding="16dp"
+            android:background="@drawable/bg_card">
+
+            <TextView
+                android:id="@+id/tvLocation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Your Location"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="#2E3A59" />
+
+            <TextView
+                android:id="@+id/tvTemperature"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="--°C"
+                android:textSize="40sp"
+                android:textStyle="bold"
+                android:textColor="#1C1C3A"
+                android:layout_marginTop="4dp" />
+
+            <TextView
+                android:id="@+id/tvCondition"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="--"
+                android:textSize="16sp"
+                android:textColor="#444444" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tvWind"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Wind: --"
+                    android:textColor="#444444" />
+
+                <TextView
+                    android:id="@+id/tvHumidity"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Humidity: --"
+                    android:textColor="#444444" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- Hourly Forecast -->
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:id="@+id/hourlyContainer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:background="@drawable/bg_card"
+                android:padding="12dp"
+                android:gravity="center_vertical" />
+        </HorizontalScrollView>
+
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>

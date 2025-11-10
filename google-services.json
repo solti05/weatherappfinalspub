@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "580534181859",
+    "project_id": "weatherloginanddatabase",
+    "storage_bucket": "weatherloginanddatabase.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:580534181859:android:f2d8436f7dec305c6d4ad6",
+        "android_client_info": {
+          "package_name": "com.example.weatherappfinals"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "580534181859-0720lk08g87la3v8bgc46jaicfb5bv79.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCJKZ4-jmrm9my5cO7pXjdYmU0oY0mcl5Y"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "580534181859-0720lk08g87la3v8bgc46jaicfb5bv79.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

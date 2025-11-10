@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name">HOPE Weather</string>
+    <string name="login">Log In</string>
+    <string name="email">Email or Username</string>
+    <string name="password">Password</string>
+    <string name="register">Register</string>
+    <string name="copyright">© 2025 HOPE Weather</string>
+
+    <!-- Register Activity -->
+    <string name="create_account">Create Your Account</string>
+    <string name="join_community">Join HOPE to connect with a supportive community.</string>
+    <string name="full_name">Full Name</string>
+    <string name="enter_full_name">Enter your full name</string>
+    <string name="email_address">Email Address</string>
+    <string name="enter_email">Enter your email</string>
+    <string name="create_password">Create a password</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="reenter_password">Re-enter your password</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="already_have_account">Already have an account?</string>
+    <string name="log_in">Log in</string>
+
+    <!-- Announcements (Missing strings) -->
+    <string name="news_image">News Image</string>
+    <string name="share_news">Share News</string>
+</resources>
